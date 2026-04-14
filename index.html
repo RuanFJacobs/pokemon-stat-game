@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Pokemon Random Stat Game</title>
+        <link rel="stylesheet" href="style.css" />
+        <link rel="icon" type="image/svg+xml" href="images/placeholder.png">
+    </head>
+
+    <body>
+        <main class="app">
+            <h1>Pokemon Random Stat Game</h1>
+
+            <div class="controls">
+                <p class="control-label">Choose a Generation:</p>
+
+                <div id="generation-buttons" class="generation-buttons">
+                    <button type="button" class="gen-btn" data-generation="1">1</button>
+                    <button type="button" class="gen-btn" data-generation="2">2</button>
+                    <button type="button" class="gen-btn" data-generation="3">3</button>
+                    <button type="button" class="gen-btn" data-generation="4">4</button>
+                    <button type="button" class="gen-btn" data-generation="5">5</button>
+                    <button type="button" class="gen-btn" data-generation="6">6</button>
+                    <button type="button" class="gen-btn" data-generation="7">7</button>
+                    <button type="button" class="gen-btn" data-generation="8">8</button>
+                    <button type="button" class="gen-btn" data-generation="9">9</button>
+                </div>
+            </div>
+
+            <section class="pokemon-card">
+                <div class="battle-layout">
+                    <div id="left-stats" class="stats-column"></div>
+
+                    <div class="pokemon-center">
+                        <h2 id="pokemon-name">Get Ready!</h2>
+
+                        <div class="image-frame">
+                            <img id="pokemon-image" src="images/placeholder.png" alt="Pokemon image" />
+
+                            <div id="image-overlay" class="image-overlay hidden">
+                                <div class="overlay-content">
+                                    <p id="result-banner" class="result-banner"></p>
+                                    <button id="play-again-btn" type="button">Play Again</button>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="live-total">
+                            <span>Totals</span>
+                            <p id="battle-total">0</p>
+                        </div>
+                    </div>
+
+                    <div id="right-stats" class="stats-column"></div>
+                </div>
+            </section>
+        </main>
+
+        <script type="module" src="script.js"></script>
+    </body>
+</html>
