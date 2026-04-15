@@ -5,7 +5,7 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
         <title>Pokemon Random Stat Game</title>
         <link rel="stylesheet" href="style.css" />
-        <link rel="icon" type="image/svg+xml" href="images/placeholder.png">
+        <link rel="icon" type="image/svg+xml" href="images/placeholder.png" />
     </head>
 
     <body>
@@ -29,7 +29,7 @@
             </div>
 
             <section class="pokemon-card">
-                <div class="battle-layout">
+                <div id="battle-layout" class="battle-layout">
                     <div id="left-stats" class="stats-column"></div>
 
                     <div class="pokemon-center">
@@ -37,13 +37,6 @@
 
                         <div class="image-frame">
                             <img id="pokemon-image" src="images/placeholder.png" alt="Pokemon image" />
-
-                            <div id="image-overlay" class="image-overlay hidden">
-                                <div class="overlay-content">
-                                    <p id="result-banner" class="result-banner"></p>
-                                    <button id="play-again-btn" type="button">Play Again</button>
-                                </div>
-                            </div>
                         </div>
 
                         <div class="live-total">
@@ -53,6 +46,26 @@
                     </div>
 
                     <div id="right-stats" class="stats-column"></div>
+                </div>
+
+                <div id="result-screen" class="result-screen hidden">
+                    <p id="result-banner" class="result-banner"></p>
+
+                    <div class="result-columns">
+                        <div class="result-column">
+                            <h3>Your Choices</h3>
+                            <p id="player-total" class="result-total"></p>
+                            <div id="player-choice-list" class="result-grid"></div>
+                        </div>
+
+                        <div class="result-column">
+                            <h3>Best Possible</h3>
+                            <p id="best-outcome" class="result-total"></p>
+                            <div id="best-outcome-list" class="result-grid"></div>
+                        </div>
+                    </div>
+
+                    <button id="play-again-btn" type="button">Play Again</button>
                 </div>
             </section>
         </main>

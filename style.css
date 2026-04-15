@@ -220,19 +220,6 @@ button:hover {
     overflow: hidden;
 }
 
-.image-overlay {
-    position: absolute;
-    inset: 0;
-    background: rgba(10, 14, 22, 0.72);
-    display: flex;
-    align-items: center;
-    justify-content: center;
-}
-
-.image-overlay.hidden {
-    display: none;
-}
-
 #play-again-btn {
     padding: 12px 20px;
     font-size: 1rem;
@@ -245,10 +232,6 @@ button:hover {
 
 #play-again-btn:hover {
     background: #922737;
-}
-
-.overlay-content {
-    text-align: center;
 }
 
 .result-banner {
@@ -266,18 +249,291 @@ button:hover {
     color: #ff7b72;
 }
 
+.result-banner {
+    margin: 0 0 20px;
+    font-size: 1.8rem;
+    font-weight: 700;
+    text-align: center;
+}
+
+.result-banner.win {
+    color: #7ee787;
+}
+
+.result-banner.lose {
+    color: #ff7b72;
+}
+
+.result-columns {
+    display: grid;
+    grid-template-columns: repeat(2, 300px);
+    justify-content: center;
+    gap: 48px;
+    margin: 0 auto 20px;
+    width: fit-content;
+    max-width: 100%;
+}
+
+.result-column {
+    background: #101621;
+    border: 1px solid #2e394a;
+    border-radius: 12px;
+    padding: 20px 20px;
+    min-width: 0;
+}
+
+.result-column h3 {
+    margin-top: 0;
+    margin-bottom: 12px;
+    font-size: 1.2rem;
+}
+
+.result-total {
+    margin: 0 0 14px;
+    font-size: 1.1rem;
+    font-weight: 700;
+    color: #8fd3ff;
+}
+
+.result-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 96px);
+    column-gap: 16px;
+    row-gap: 12px;
+    width: max-content;
+    margin: 12px auto 0;
+}
+
+.result-card {
+    background: #131923;
+    border: 1px solid #2e394a;
+    border-radius: 12px;
+    padding: 10px 6px;
+    text-align: center;
+    width: 96px;
+    box-sizing: border-box;
+}
+.hidden {
+    display: none;
+}
+
+.result-screen {
+    padding-top: 8px;
+}
+
+.result-card-image {
+    width: 72px;
+    height: 72px;
+    object-fit: contain;
+    display: block;
+    margin: 0 auto 8px;
+}
+
+.result-card-info {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+}
+
+.result-card-stat {
+    margin: 0;
+    font-size: 0.85rem;
+    color: #9fb3c8;
+    font-weight: 600;
+}
+
+.result-card-value {
+    margin: 0;
+    font-size: 1rem;
+    color: #f5f7fa;
+    font-weight: 700;
+}
+
 @media (max-width: 900px) {
+    body {
+        padding: 6px;
+    }
+
+    .app {
+        padding: 12px;
+        border-radius: 10px;
+    }
+
+    h1 {
+        font-size: 1.05rem;
+        line-height: 1.15;
+        margin-bottom: 10px;
+    }
+
+    .controls {
+        margin-bottom: 10px;
+    }
+
+    .control-label {
+        font-size: 0.9rem;
+        margin-bottom: 6px;
+    }
+
+    .generation-buttons {
+        display: grid;
+        grid-template-columns: repeat(9, 1fr);
+        gap: 6px;
+        margin-bottom: 10px;
+    }
+
+    .gen-btn {
+        min-width: 0;
+        padding: 6px 0;
+        font-size: 0.75rem;
+        border-radius: 6px;
+    }
+
+    .pokemon-card {
+        padding: 10px;
+        overflow-x: hidden;
+    }
+
     .battle-layout {
+        display: grid;
         grid-template-columns: 1fr;
+        gap: 10px;
     }
 
     .stats-column {
-        flex-direction: row;
-        flex-wrap: wrap;
-        justify-content: center;
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 6px;
     }
 
     .stat-card {
-        width: 140px;
+        width: 100%;
+        min-width: 0;
+        padding: 8px 10px;
+        font-size: 0.85rem;
+    }
+
+    .stat-name,
+    .stat-value {
+        font-size: 0.8rem;
+    }
+
+    .pokemon-center {
+        gap: 10px;
+    }
+
+    #pokemon-name {
+        font-size: 0.95rem;
+        margin: 0;
+    }
+
+    .image-frame {
+        width: 100%;
+        max-width: 190px;
+        height: 190px;
+        padding: 8px;
+        margin: 0 auto;
+    }
+
+    #pokemon-image {
+        max-width: 150px;
+        max-height: 150px;
+    }
+
+    .live-total span {
+        font-size: 0.75rem;
+        margin-bottom: 2px;
+    }
+
+    #battle-total {
+        font-size: 1.2rem;
+    }
+
+    /* MOBILE RESULT SCREEN - ULTRA COMPACT */
+        .result-screen {
+        padding-top: 2px;
+        width: 100%;
+        overflow-x: hidden;
+    }
+
+    .result-banner {
+        font-size: 0.95rem;
+        margin-bottom: 6px;
+        line-height: 1.2;
+    }
+
+    .result-columns {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 8px;
+        width: 100%;
+        margin: 0 0 8px;
+    }
+
+    .result-column {
+        width: 100%;
+        max-width: 100%;
+        padding: 8px 6px;
+        border-radius: 8px;
+        box-sizing: border-box;
+    }
+
+    .result-column h3 {
+        font-size: 0.8rem;
+        margin-bottom: 4px;
+    }
+
+    .result-total {
+        font-size: 0.75rem;
+        margin-bottom: 4px;
+    }
+
+    .result-grid {
+        display: grid;
+        grid-template-columns: repeat(2, 56px);
+        justify-content: center;
+        column-gap: 6px;
+        row-gap: 6px;
+        width: max-content;
+        margin: 6px auto 0;
+    }
+
+    .result-card {
+        width: 56px;
+        padding: 4px 3px;
+        border-radius: 8px;
+        box-sizing: border-box;
+    }
+
+    .result-card-image {
+        width: 32px;
+        height: 32px;
+        margin: 0 auto 2px;
+    }
+
+    .result-card-stat {
+        font-size: 0.52rem;
+        margin: 0;
+        line-height: 1.1;
+    }
+
+    .result-card-value {
+        font-size: 0.68rem;
+        margin: 0;
+        line-height: 1.1;
+    }
+
+    #play-again-btn {
+        margin-top: 6px;
+        padding: 7px 12px;
+        font-size: 0.8rem;
+    }
+
+    .hidden {
+        display: none !important;
+    }
+
+    .battle-layout.hidden,
+    .result-screen.hidden {
+        display: none !important;
     }
 }
