@@ -13,14 +13,14 @@ This project demonstrates dynamic UI updates, algorithmic problem solving, and r
 
 ## Preview
 
-Homepage
+Homepage\
 <img src="screenshots/homescreenshot.png" width="700">
-Gameplay
+Gameplay\
 <img src="screenshots/gamescreenshot.png" width="700">
-Win Result
+Win Result\
 <img src="screenshots/winresultscreenshot.png" width="700">
-Lose Result
-<img src="screenshots/loseresultsscreenshot.png" width="700">
+Lose Result\
+<img src="screenshots/loseresultscreenshot.png" width="700">
 
 ---
 
